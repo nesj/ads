@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Подать объявление</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/add_ad.css">
+</head>
+<body>
+<header class="header">
+		<div class="container header__container">
+			<div class="header__content">
+				<div class="header__top">
+					<span class="header__logo">
+						<a href="index.php" class="header__logo-link"><img class="header__img" src="img/logo.png" alt=""></a>
+					</span>
+					<a class="header__top-link" href="#">
+						<h1 class="header__top-link">****.lv <br> Доска интимных объявлений по Латвии и прибалтике</h1>
+					</a>
+					<div class="header__languages">
+						<button class="btn-reset header__languages-btns">
+							Английский
+						</button>
+						<button class="btn-reset header__languages-btns">
+							Русский
+						</button>
+						<button class="btn-reset header__languages-btns">
+							Латышский
+						</button>
+						<button class="btn-reset header__languages-btns">
+							Эстонский
+						</button>
+						<button class="btn-reset header__languages-btns">
+							Литовский
+						</button>
+					</div>
+				</div>
+				<div class="header__bottom">
+					<nav class="nav">
+						<ul class="nav__list list-reset">
+							<li class="nav__list-elements">
+								<a href="#" class="nav__list-links">Добавить объявление</a>
+							</li>
+							<li class="nav__list-elements">
+								<a href="#" class="nav__list-links">Все объявления</a>
+							</li>
+							<li class="nav__list-elements">
+								<a href="#" class="nav__list-links">Поиск</a>
+							</li>
+							<li class="nav__list-elements">
+								<a href="#" class="nav__list-links">О нас/связь с нами</a>
+							</li>
+							<li class="nav__list-elements">
+								<a href="#" class="nav__list-links">Правила</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<div class="container add-container">
+			<section class="add">
+				<div class="add__border">
+					<h2 class="add__h2">Добавить объявление:</h2>
+					<p class="add__p"><span class="red-star">*</span> - обязательные поля</p>
+					<form method="post" action="submit_ad.php" enctype="multipart/form-data" class="add__form">
+						<div class="add__block">
+							<div class="add__label">
+								<label for="add__select-category" class="form-label">Выберите категорию: <span class="red-star">*</span> </label>
+							</div>
+							<div class="input">
+								<select required id="add__select-category" name="add__select-category" class="add__select-category">
+									<option>Выбрать категорию</option>
+									<option>Женщины ищут мужчину для секса</option>
+									<option>Женщины ищут мужчину для серьёзных отношений</option>
+									<option>Sexwife</option>
+									<option>Женщины ищут женщин</option>
+									<option>Мужчины ищут женщину для секса</option>
+									<option>Мужчины ищут женщину для серьёзных отношений</option>
+									<option>Мужчины ищут мужчин</option>
+									<option>Парочки</option>
+									<option>Секс-вечеринки</option>
+									<option>Садо-мазо</option>
+									<option>Кто-то ищет что-то другое</option>
+									<option>Эскорт и массаж</option>
+									<option>Мужской эскорт</option>
+									<option>Виртуальные услуги, видеозвонки, фото</option>
+									<option>Транссексуалы и трансвеститы</option>
+									<option>Вопросы и ответы</option>
+									<option>Стриптиз</option>
+									<option>Вакансии и коммерческие предложения</option>
+									<option>Ищут работу</option>
+									<option>Игрушки для хорошего секса</option>
+									<option>Мужские разговоры</option>
+									<option>Эротические истории</option>
+								</select>
+							</div>
+						</div>
+						<div class="add__block">
+							<div class="add__label">
+								<label for="name" class="form-label">Ваше имя: <span class="red-star">*</span></label>
+							</div>
+							<div class="add__input">
+								<input type="text" name="name" id="name" required>
+							</div>
+						</div>
+						<div class="add__block">
+							<div class="add__label">
+								<label for="age" class="form-label">Ваш возраст</label>
+							</div>
+							<div class="add__input">
+								<input type="text" name="age" id="age" maxlength="3">
+							</div>
+						</div>
+						<div class="add__block">
+							<div class="add__label">
+								<label for="email" class="form-label">Ваша почта: <span class="red-star">*</span></label>
+							</div>
+							<div class="add__input">
+								<input type="email" name="email" id="email" required>
+							</div>
+						</div>
+						<div class="add__block">
+							<div class="add__label">
+								<label for="phone-number" class="form-label">Номер телефона:</label>
+							</div>
+							<div class="add__input">
+								<input type="number" name="phone-number" id="phone-number">
+							</div>
+						</div>
+						<div class="add__block">
+							<div class="add__label">
+								<label for="web-site" class="form-label">Веб-сайт:</label>
+							</div>
+							<div class="add__input">
+								<input type="url" name="web-site" id="web-site">
+							</div>
+						</div>
+						<div class="add__block">
+							<div class="add__label">
+								<label for="country-select" class="form-label">Страна: <span class="red-star">*</span> </label>
+							</div>
+							<div class="input">
+								<select name="country" id="country-select" class="country-select" required>
+									<option>Выбрать страну</option>
+									<option value="2">Латвия</option>
+									<option value="3">Литва</option>
+									<option value="4">Эстония</option>
+									<option value="1">Другая страна</option>
+								</select>
+							</div>
+						</div>
+						<div class="add__block">
+							<div class="add__label">
+								<label for="add__header" class="add__header-label">Заголовок объявления:<span class="red-star"> *</span></label>
+							</div>
+							<div class="add__input">
+								<input required type="text" name="add__header" id="add__header" maxlength="44">
+							</div>
+						</div>
+						<div class="textarea">
+							<div class="add__label">
+								<label for="text-in-ad" class="add__textarea-label">Текст объявления: <span class="red-star">*</span> </label>
+							</div>
+							<div class="add__input">
+								<textarea required name="text-in-ad" id="text-in-ad" class="add__textarea" maxlength="1000"></textarea>
+							</div>
+						</div>
+						<div class="add__photos-block">
+							<div class="add__label">
+								<label for="photos-label">Добавить фотографию:</label>
+							</div>
+							<div class="add__photos">
+								<a href="#" class="icons">
+									<img src="img/add-ad/add-icon.png" class="add__icons" alt="">
+									<input name="photos[]" type="file" class="file-input">
+								</a>
+								<a href="#" class="icons">
+									<img src="img/add-ad/add-icon.png" class="add__icons" alt="">
+									<input name="photos[]" type="file" class="file-input">
+								</a>
+								<a href="#" class="icons">
+									<img src="img/add-ad/add-icon.png" class="add__icons" alt="">
+									<input name="photos[]" type="file" class="file-input">
+								</a>
+								<a href="#" class="icons">
+									<img src="img/add-ad/add-icon.png" class="add__icons" alt="">
+									<input name="photos[]" type="file" class="file-input">
+								</a>
+								<a href="#" class="icons">
+									<img src="img/add-ad/add-icon.png" class="add__icons" alt="">
+									<input name="photos[]" type="file" class="file-input">
+								</a>
+								<a href="#" class="icons">
+									<img src="img/add-ad/add-icon.png" class="add__icons" alt="">
+									<input name="photos[]" type="file" class="file-input">
+								</a>
+							</div>
+						</div>
+						<div class="add__block">
+							<div class="add__label">
+								<label for="delete-code" class="form-label">Код для удаления объявления: <span class="red-star">*</span></label>
+							</div>
+							<div class="add__input">
+								<input type="text" id="delete-code" name="delete-code" maxlength="10" minlength="4" required>
+							</div>
+						</div>
+						<div class="add__block checkbox">
+							<div class="add__label">
+								<label class="add__agree-label" for="add__agree">Я согласен с правилами <span class="red-star">*</span></label>
+							</div>
+							<div class="add__input">
+								<input class="add__checkbox" type="checkbox" id="add__agree" required>
+							</div>
+						</div>
+						<div class="add__btn">
+							<button class="btn-reset form-btn">Добавить объявление</button>
+						</div>
+					</form>
+					<div class="add__warning">
+						<div class="add__warning-content">
+							<h2 class="add__warning-h2">Внимание!</h2>
+							<p class="add__warning-p">
+								Пожалуйста, прежде чем подавать объявление - ознакомьтесь с правилами сервиса по <a href="#" class="add__warning-link">этой ссылке</a>! <br>
+								Ваше объявление подаётся бесплатно и на неопределённый срок, но за нарушение правил сервиса Вы можете быть забанены, все объявления удалены, а данные могут отправиться в полицию!<br>
+								Нажимая на кнопку "Я согласен с правилами" - Вы автоматически соглашаетесь с правилами пользования сервиса.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section class="right">
+				<form class="right__form" action="add_ad.html">
+					<button class="btn-reset right__form-btn">Добавить объявление</button>
+				</form>
+				<h2 class="right__h2">Категории:</h2>
+				<ul class="right__list list-reset">
+					<li class="right_list-elements">
+						<a href="#" class="right__list-links">Женщины ищут мужчину для секса</a>
+					</li>
+					<li class="right_list-elements">
+						<a href="#" class="right__list-links">Женщины ищут мужчину для серьёзных отношений</a>
+					</li>
+					<li class="right_list-elements">
+						<a href="#" class="right__list-links">Sexwife</a>
+					</li>
+					<li class="right_list-elements">
+						<a href="#" class="right__list-links">Женщины ищут женщин</a>
+					</li>
+					<li class="right_list-elements">
+						<a href="#" class="right__list-links">Мужчины ищут женщину для секса</a>
+					</li>
+					<li class="right_list-elements">
+						<a href="#" class="right__list-links">Мужчины ищут женщину для серьёзных отношений</a>
+					</li>
+					<li class="right_list-elements">
+						<a href="#" class="right__list-links">Мужчины ищут мужчин</a>
+					</li>
+					<li class="right_list-elements">
+						<a href="#" class="right__list-links">Парочки</a>
+					</li>
+					<li class="right_list-elements">
+						<a href="#" class="right__list-links">Секс-вечеринки</a>
+					</li>
+					<li class="right_list-elements">
+						<a href="#" class="right__list-links">Садо-мазо</a>
+					</li>
+					<li class="right_list-elements">
+						<a href="#" class="right__list-links">Кто-то ищет что-то другое</a>
+					</li>
+					<li class="right_list-elements">
+						<a href="#" class="right__list-links">Эскорт и массаж</a>
+					</li>
+					<li class="right_list-elements">
+						<a href="#" class="right__list-links">Мужской эскорт</a>
+					</li>
+					<li class="right_list-elements">
+						<a href="#" class="right__list-links">Виртуальные услуги, видеозвонки, фото</a>
+					</li>
+					<li class="right_list-elements">
+						<a href="#" class="right__list-links">Транссексуалы и трансвеститы</a>
+					</li>
+					<li class="right_list-elements">
+						<a href="#" class="right__list-links">Вопросы и ответы</a>
+					</li>
+					<li class="right_list-elements">
+						<a href="#" class="right__list-links">Стриптиз</a>
+					</li>
+					<li class="right_list-elements">
+						<a href="#" class="right__list-links">Вакансии и коммерческие предложения</a>
+					</li>
+					<li class="right_list-elements">
+						<a href="#" class="right__list-links">Ищут работу</a>
+					</li>
+					<li class="right_list-elements">
+						<a href="#" class="right__list-links">Игрушки для хорошего секса</a>
+					</li>
+					<li class="right_list-elements">
+						<a href="#" class="right__list-links">Мужские разговоры</a>
+					</li>
+					<li class="right_list-elements">
+						<a href="#" class="right__list-links">Эротические истории</a>
+					</li>
+				</ul>
+			</section>
+		</div>
+	</main>
+	<script src="js/scripts/add-ad-icons.js"></script>
+</body>
+</html>
